@@ -51,10 +51,12 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  // const result = Number((value1 + value2) / 2);
-  // return result;
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  let result = Number((value1 + value2) / 2);
+  if (Infinity === result) {
+    result = 1.7976931348623157e+308;
+  }
+  return result;
 }
 
 /**
@@ -89,8 +91,19 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  let result;
+  const z = a;
+  if (z !== 0 && b !== 0) {
+    result = -b / z;
+  } else if (z === 0) {
+    result = -b;
+  } else if (b === 0) {
+    result = 0;
+  } else if (z === b) {
+    result = z;
+  }
+  return result;
 }
 
 
@@ -189,13 +202,14 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  // let result = Math.round(num, pow);
-  // if (pow === 0) {
-  //   result = num;
-  // }
-  // return result;
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  let result;
+  if (pow === 0) {
+    result = num;
+  } else {
+    result = Math.round(num / 10 ** pow) * 10 ** pow;
+  }
+  return Math.round(result);
 }
 
 /**
