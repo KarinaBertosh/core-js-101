@@ -24,7 +24,7 @@
  *
  */
 function getComposition(f, g) {
-  return function (x) {
+  return function aa(x) {
     return f(g(x));
   };
 }
@@ -85,7 +85,7 @@ function getPolynom() {
  */
 function memoize(func) {
   const memoryFunc = new Map();
-  return function (item) {
+  return function aa(item) {
     let resultFunc;
     if (!memoryFunc.has(item)) {
       resultFunc = func(item);
