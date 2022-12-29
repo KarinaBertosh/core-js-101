@@ -216,35 +216,32 @@ function getRectangleString(/* width, height */) {
   // const b = '┌';
   // const c = '┐';
   // const n = '\n';
-  // const k = '\\n';
-  // const plus = '+';
 
   // const i = '└';
   // const f = '┘';
   // const g = '─';
-  // let widthResultUp = a + b + c;
-  // let widthResultDown = a + i + f;
+  // let widthResultUp = b + c;
+  // let widthResultDown = i + f;
   // const countHeight = '│';
   // let resultHeight;
   // const up = ' ';
 
 
   // if (width > 2) {
-  //   widthResultUp = up + a + b + g.repeat(width - 2) + c;
-  //   widthResultDown = a + i + g.repeat(width - 2) + f;
+  //   widthResultUp = b + g.repeat(width - 2) + c;
+  //   widthResultDown = i + g.repeat(width - 2) + f;
   // }
 
-  // let result = widthResultUp + k + a + n + plus + widthResultDown + k + a;
+  // let result = widthResultUp + n + widthResultDown + a;
 
   // if (height > 2) {
-  //   resultHeight = a + countHeight + up.repeat(width - 2) + countHeight + k + a + n + plus;
+  //   resultHeight = countHeight + up.repeat(width - 2) + countHeight + n;
   //   const r = resultHeight.repeat(height - 2);
-  //   result = widthResultUp + k + a + n + plus + r + widthResultDown + k + a;
+  //   result = widthResultUp + n + r + widthResultDown;
   // }
 
-  // const a = width + height;
 
-  // return `${a}ddd`;
+  // return result;
 }
 
 
